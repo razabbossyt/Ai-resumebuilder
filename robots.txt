@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://razabbossyt.github.io/Ai-resumebuilder/sitemap.xml
