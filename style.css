@@ -40,4 +40,81 @@ body {
   button:hover {
     background-color: #45a049;
   }
-  
+  /* ✅ Mobile Spacing & Layout Fix */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding: 0 10px;
+  }
+
+  .container {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  input, textarea, select, button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}/* ✅ Mobile Spacing & Layout Fix */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding: 0 10px;
+  }
+
+  .container {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  input, textarea, select, button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  input, textarea, select, button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .plans {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .plan {
+    width: 100%;
+  }
+
+  /* Optional spacing fix if headings/text overlap near plan section */
+  .plan h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .plan p {
+    font-size: 14px;
+  }
+}
