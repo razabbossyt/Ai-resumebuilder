@@ -123,5 +123,27 @@ body {
     margin-bottom: 20px;
     text-align: center;
   }
+  @media (max-width: 600px) {
+    .pricing-section {
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+  
+    .section-title {
+      padding-top: 40px;
+      margin-top: 20px;
+    }
+  
+    .pricing-cards {
+      margin-top: 20px;
+    }
+  
+    .pricing-card {
+      padding: 15px;
+    }
+  }
+  .mobile-spacer {
+    margin-top: 40px;
+  }
   
 
