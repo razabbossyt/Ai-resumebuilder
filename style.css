@@ -118,3 +118,14 @@ body {
     font-size: 14px;
   }
 }
+.section-title {
+  padding-top: 40px; /* 🔧 Upar se jagah dena */
+  text-align: center;
+}
+.plans {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
