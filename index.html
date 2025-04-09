@@ -1365,7 +1365,20 @@
   Generate with AI
 </button>
 
-                        title: "Professional Summary",
+<!-- PROFESSIONAL SUMMARY SECTION -->
+<label for="summary"><strong>Professional Summary</strong></label>
+<textarea id="summary" rows="4" placeholder="Write your professional summary..." 
+          style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+
+<input id="summaryInput" placeholder="Enter job role e.g. Graphic Designer" 
+       style="width: 100%; padding: 8px;" />
+
+<button onclick="generateSummary(document.getElementById('summaryInput').value)" 
+        style="margin-top: 5px; background-color: #2563eb; color: white; padding: 8px; border: none; border-radius: 4px;">
+  AI Generate Summary
+</button>
+
+
                         suggestion: "Consider making your professional summary more achievement-oriented. For example: 'Results-driven software developer with 5+ years of experience building scalable web applications, leading to a 30% increase in user engagement at Tech Corp Inc.'",
                         field: "summary"
                     },
