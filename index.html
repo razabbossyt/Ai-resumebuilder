@@ -1471,5 +1471,12 @@
             updatePreview();
         });
     </script>
+    <script src="script.js"></script>
+    <h2>AI Summary Generator</h2>
+<input id="summaryInput" placeholder="Enter job role like Web Developer" />
+<button onclick="generateSummary(document.getElementById('summaryInput').value, 'summaryOutput')">AI Generate Summary</button>
+<p id="summaryOutput"></p>
+
 </body>
 </html>
+
