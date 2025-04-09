@@ -1495,7 +1495,22 @@
 <input id="summaryInput" placeholder="Enter job role like Web Developer" />
 <button onclick="generateSummary(document.getElementById('summaryInput').value, 'summaryOutput')">AI Generate Summary</button>
 <p id="summaryOutput"></p>
-
+<script>
+    function generateSummary(role) {
+      const summaryText = `Experienced ${role} with a strong background in design principles, user research, and modern design tools. Proven ability to create intuitive user interfaces and enhance user experiences across various platforms.`;
+      
+      document.getElementById("summary").value = summaryText;
+  
+      // ✅ Resume preview area update karne ke liye:
+      document.getElementById("preview-summary").innerText = summaryText;
+    }
+  
+    // ✅ Jab user manually likhe to bhi update ho:
+    document.getElementById("summary").addEventListener("input", function () {
+      document.getElementById("preview-summary").innerText = this.value;
+    });
+  </script>
+  
 </body>
 </html>
 
