@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
       result.innerHTML = `<h3>Thank you, ${name}!</h3><p>We’ve received your resume at ${email}.</p>`;
     });
   });
-  async function generateSummary(inputText, outputId) {
-    const apiKey = "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";
+  async function generateSummary(inputText) {
+    const apiKey = "YOUR_OPENAI_API_KEY"; // apni OpenAI key daalo
   
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
         messages: [
-          { role: "system", content: "You are a helpful assistant that summarizes resumes." },
-          { role: "user", content: `Summarize this job role for a resume: ${inputText}` },
+          { role: "system", content: "You are a helpful assistant that writes strong professional summaries for resumes." },
+          { role: "user", content: `Write a 3-line professional summary for the role of: ${inputText}` },
         ],
       }),
     });
@@ -33,11 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = await response.json();
   
     if (data.choices && data.choices.length > 0) {
-      document.getElementById(outputId).innerText = data.choices[0].message.content.trim();
+      document.getElementById("summary").value = data.choices[0].message.content.trim();
     } else {
-      document.getElementById(outputId).innerText = "No response received.";
+      document.getElementById("summary").value = "AI response not available. Try again.";
     }
   }
-  
-
   
