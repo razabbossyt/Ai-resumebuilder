@@ -1509,6 +1509,26 @@
     document.getElementById("summary").addEventListener("input", function () {
       document.getElementById("preview-summary").innerText = this.value;
     });
+
+    <script>
+  // AI Button click pe summary generate + update
+  function generateSummary(role) {
+    const summaryText = `Experienced ${role} with a strong background in design principles, user research, and modern design tools. Proven ability to create intuitive user interfaces and enhance user experiences across various platforms.`;
+    
+    // Set summary textbox
+    document.getElementById("summary").value = summaryText;
+
+    // Set preview section
+    document.getElementById("preview-summary").innerText = summaryText;
+  }
+
+  // Jab user manually likhe, live preview update ho
+  document.getElementById("summary").addEventListener("input", function () {
+    document.getElementById("preview-summary").innerText = this.value;
+  });
+  
+</script>
+
   </script>
   
 </body>
